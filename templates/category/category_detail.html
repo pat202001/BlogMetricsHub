@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ category.name }} Category</title>
+</head>
+<body>
+    <h1>{{ category.name }} Category</h1>
+    <h2>Blog Posts in this Category</h2>
+    <ul>
+        {% for post in blog_posts %}
+            <li><a href="{% url 'blog:detail' post.id %}">{{ post.title }}</a></li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
